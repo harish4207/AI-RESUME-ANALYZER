@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal AI Resume Analyzer
 
 An AI-powered tool that analyzes your resume against job descriptions to provide matching scores and improvement suggestions.
@@ -39,3 +40,6 @@ An AI-powered tool that analyzes your resume against job descriptions to provide
 - spaCy for NLP
 - PyMuPDF for PDF parsing
 - scikit-learn for similarity matching 
+=======
+# AI-RESUME-ANALYZER
+>>>>>>> e11df7a2c2803a1a8d125ef9a43bd158e78774b2
