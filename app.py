@@ -723,7 +723,13 @@ def create_gauge_chart(score, title):
             }
         }
     ))
-    fig.update_layout(height=250, margin=dict(l=20, r=20, t=50, b=20), font=dict(color="#333333", family="Inter"))
+    fig.update_layout(
+        height=250,
+        margin=dict(l=20, r=20, t=50, b=20),
+        font=dict(color="#333333", family="Inter"),
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)'
+    )
     return fig
 
 def create_keyword_chart(matching_keywords, missing_keywords):
@@ -732,10 +738,14 @@ def create_keyword_chart(matching_keywords, missing_keywords):
         'Category': ['Matching Keywords', 'Missing Keywords'],
         'Count': [len(matching_keywords), len(missing_keywords)]
     })
-    fig = px.bar(df, x='Category', y='Count',
-                 color='Category',
-                 color_discrete_sequence=['#4CAF50', '#F44336'],
-                 text_auto=True)
+    fig = px.bar(
+        df,
+        x='Category',
+        y='Count',
+        color='Category',
+        color_discrete_sequence=['#4CAF50', '#F44336'],
+        text_auto=True
+    )
     fig.update_layout(
         height=350,
         margin=dict(l=20, r=20, t=50, b=20),
@@ -743,7 +753,9 @@ def create_keyword_chart(matching_keywords, missing_keywords):
         title_text='Keyword Distribution',
         title_x=0.5,
         yaxis_title="Number of Keywords",
-        xaxis_title=""
+        xaxis_title="",
+        paper_bgcolor='rgba(0,0,0,0)',
+        plot_bgcolor='rgba(0,0,0,0)'
     )
     return fig
 
